@@ -3,7 +3,7 @@
 
 Full-stack MERN application, leveraging a third-party API, and deployed to Heroku
 
-**Live site:** <https://enigmatic-dawn-85886.herokuapp.com/>
+**Live site:** <https://planet-killer.herokuapp.com/>
 
 **Project Planning:** [Trello](https://trello.com/b/3Be4OE0C/planet-killer)
 
