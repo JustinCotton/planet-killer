@@ -18,7 +18,7 @@ Full-stack MERN application, leveraging a third-party API, and deployed to Herok
   * API Development: Postman
   * Cloud Deployment: Heroku
   * Text Editor: Visual Studio Code
-  * Design: Google Fonts
+  * Design: Unsplash, Google Fonts
 
 ## Features
 
