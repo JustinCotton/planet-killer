@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-// import Creatures from './components/Creatures'
-// import SingleCreature from './components/SingleCreature'
+import Planets from './components/Planets'
+import Planet from './components/Planet'
 
 class App extends Component {
   render () {
@@ -10,8 +10,8 @@ class App extends Component {
         <div>
           <p>Planet Killer!</p>
           <Switch>
-            {/* <Route exact path="/" component={Creatures}/>
-            <Route path="/:id" component={SingleCreature}/> */}
+            <Route exact path="/planets" component={Planets}/>
+            <Route path="/planets/:id" component={Planet}/>
           </Switch>
         </div>
       </Router>
