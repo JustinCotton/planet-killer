@@ -142,10 +142,10 @@ let newCelestialBodies = [
   }  
 ]
 
-Planet.createPlanet(newPlanets).then(system => {
+Planet.create(newPlanets).then(system => {
   console.log('Created Planets ', system)
 })
 
-CelestialBody.createCelestialBody(newCelestialBodies).then(galaxy => {
+CelestialBody.create(newCelestialBodies).then(galaxy => {
   console.log('Created Celestial Bodies ', galaxy)
 })
