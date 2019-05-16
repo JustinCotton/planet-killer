@@ -1,22 +1,23 @@
 const express = require('express')
-const router = express.Router()
+const planetRouter = express.Router()
+const celestialBodyRouter = express.Router()
 
 // import controllers
 const planetController = require('../controllers/planetController')
 const celestialBodyController = require('../controllers/celestialBodyController')
 
 // planet routes
-router.get('/planets', planetController.index)
-router.post('/planets', planetController.create)
-router.get('/planets/:id', planetController.show)
-router.put('/planets/:id', planetController.update)
-router.delete('/planets/:id', planetController.delete)
+planetRouter.get   ('/', planetController.index)
+planetRouter.post  ('/', planetController.create)
+planetRouter.get   ('/:id', planetController.show)
+planetRouter.put   ('/:id', planetController.update)
+planetRouter.delete('/:id', planetController.delete)
 
 // celestial body routes
-router.get('/celestialbodies', celestialBodyController.index)
-router.post('/celestialbodies', celestialBodyController.create)
-router.get('/celestialbodies/:id', celestialBodyController.show)
-router.put('/celestialbodies/:id', celestialBodyController.update)
-router.delete('/celestialbodies/:id', celestialBodyController.delete)
+celestialBodyRouter.get   ('/', celestialBodyController.index)
+celestialBodyRouter.post  ('/', celestialBodyController.create)
+celestialBodyRouter.get   ('/:id', celestialBodyController.show)
+celestialBodyRouter.put   ('/:id', celestialBodyController.update)
+celestialBodyRouter.delete('/:id', celestialBodyController.delete)
 
-module.exports = router
+module.exports = { planetRouter, celestialBodyRouter }

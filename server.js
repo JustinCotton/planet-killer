@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const routes = require('./routes/index.js')
+const { planetRouter, celestialBodyRouter } = require('./routes/index.js')
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -12,11 +12,13 @@ app.get('/', (req,res) => {
 })
 */
 
+
+app.use('/api/v1/planets', planetRouter)
+app.use('/api/v1/celestialbodies', celestialBodyRouter)
+
 app.get('/*', (req, res) => {
     res.sendFile(`${__dirname}/client/build/index.html`)
 })
-
-app.use('/', routes)
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
