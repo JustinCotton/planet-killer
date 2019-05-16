@@ -6,7 +6,13 @@ class Planet extends Component {
   state = {
       planet: {
           name: '',
-          description: ''
+          image: '',
+          averageDistanceFromEarth: '',
+          climate: '',
+          meanTemperatureF: 0,
+          percentOfEarthGravity: '',
+          moons: 0,
+          destroyed: false          
       },
       redirectToHome: false,
       isEditFormDisplayed: false
@@ -41,7 +47,13 @@ class Planet extends Component {
       axios
         .put(`/planets/${this.props.match.params.id}`, {
             name: this.state.planet.name,
-            description: this.state.planet.description
+            image: this.state.planet.image,            
+            averageDistanceFromEarth: this.state.planet.averageDistanceFromEarth,
+            climate: this.state.planet.climate,
+            meanTemperatureF: this.state.planet.meanTemperatureF,
+            percentOfEarthGravity: this.state.planet.percentOfEarthGravity,
+            moons: this.state.planet.moons,
+            destroyed: this.state.planet.destroyed    
         })
         .then(res => {
             this.setState({planet: res.data, isEditFormDisplayed: false})
@@ -72,23 +84,70 @@ class Planet extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="description">Description</label>
+                        <label htmlFor="image">Image URL</label>
                         <textarea
-                            id="description"
-                            name="description"
+                            id="image"
+                            name="image"
                             onChange={this.handleChange}
-                            value={this.state.planet.description}
+                            value={this.state.planet.image}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="averageDistanceFromEarth">Average Distance From Earth</label>
+                        <textarea
+                            id="averageDistanceFromEarth"
+                            name="averageDistanceFromEarth"
+                            onChange={this.handleChange}
+                            value={this.state.planet.averageDistanceFromEarth}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="climate">Climate</label>
+                        <textarea
+                            id="climate"
+                            name="climate"
+                            onChange={this.handleChange}
+                            value={this.state.planet.climate}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="meanTemperatureF">Mean Temperature in &deg;F</label>
+                        <textarea
+                            id="meanTemperatureF"
+                            name="meanTemperatureF"
+                            onChange={this.handleChange}
+                            value={this.state.planet.meanTemperatureF}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="percentOfEarthGravity">% of Earth's Gravity</label>
+                        <textarea
+                            id="percentOfEarthGravity"
+                            name="percentOfEarthGravity"
+                            onChange={this.handleChange}
+                            value={this.state.planet.percentOfEarthGravity}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="moons">Number of Moons</label>
+                        <textarea
+                            id="moons"
+                            name="moons"
+                            onChange={this.handleChange}
+                            value={this.state.planet.moons}
                         />
                     </div>
                     <button>Update</button>
                 </form>
                 : <div>
-                    <div>
-                        Name: {this.state.planet.name}
-                    </div>
-                    <div>
-                        Description: {this.state.planet.description}
-                    </div>
+                    <div>Name: {this.state.planet.name}</div>
+                    <div><img src={this.state.planet.image}/></div>
+                    <div>Average Distance From Earth: {this.state.planet.averageDistanceFromEarth}</div>
+                    <div>Climate: {this.state.planet.climate}</div>
+                    <div>Mean Temperature in &deg;F: {this.state.planet.meanTemperatureF}</div>
+                    <div>% of Earth's Gravity: {this.state.planet.percentOfEarthGravity}</div>
+                    <div>Number of Moons: {this.state.planet.moons}</div>
+                    {/* <div>Destroyed: {this.state.planet.destroyed}</div> */}
                     <button onClick={this.deletePlanet}>Delete</button>
                 </div>
         }
