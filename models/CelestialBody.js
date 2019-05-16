@@ -3,9 +3,9 @@ const Schema = mongoose.Schema
 
 const CelestialBody = new Schema({
     name: String,
-    classification: String,
     image: String,
-    maxDistanceFromEarth: String,
+    classification: String,
+    distanceFromEarth: String,
     galaxy: String,
     constellation: String,
     destroyed: Boolean
