@@ -74,7 +74,7 @@ class CelestialBodies extends Component {
                 return (
                     <div key={celestialBody._id}>
                         <Link
-                            to={`/api/v1/celestialbodies/${celestialBody._id}`}
+                            to={`/celestialbodies/${celestialBody._id}`}
                         >
                             {celestialBody.name}
                         </Link>

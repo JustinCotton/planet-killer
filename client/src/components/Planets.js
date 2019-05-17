@@ -70,7 +70,7 @@ class Planets extends Component {
                 return (
                     <div key={planet._id}>
                         <Link
-                            to={`/api/v1/planets/${planet._id}`}
+                            to={`/planets/${planet._id}`}
                         >
                             {planet.name}
                         </Link>
