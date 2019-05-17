@@ -7,7 +7,8 @@ class Planets extends Component {
       planets: [],
       newPlanet: {
           name: '',
-          description: ''
+          climate: '',
+          moons: null
       },
       isPlanetFormDisplayed: false
   }
@@ -43,7 +44,8 @@ class Planets extends Component {
             this.setState({
                 newPlanet: {
                     name: '',
-                    description: ''
+                    climate: '',
+                    moons: 0
                 },
                 isPlanetFormDisplayed: false,
                 planets: planetsList
@@ -84,13 +86,23 @@ class Planets extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="description">Description</label>
+                        <label htmlFor="climate">Climate</label>
                         <textarea
-                            id="description"
+                            id="climate"
                             type="text"
-                            name="description"
+                            name="climate"
                             onChange={this.handleChange}
-                            value={this.state.newPlanet.description}
+                            value={this.state.newPlanet.climate}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="moons">Moons</label>
+                        <textarea
+                            id="moons"
+                            type="text"
+                            name="moons"
+                            onChange={this.handleChange}
+                            value={this.state.newPlanet.moons}
                         />
                     </div>
                     <button>Create</button>

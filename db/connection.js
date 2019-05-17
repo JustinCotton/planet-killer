@@ -1,12 +1,6 @@
 require('dotenv').config()
 const mongoose = require('mongoose')
 
-// if(process.env.MONGODB_URI) {
-//     mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
-// } else {
-//     mongoose.connect('mongodb://localhost/planet-killer')
-// }
-
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
 
 mongoose.connection.once('open', () => {
