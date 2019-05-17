@@ -24,7 +24,7 @@ class CelestialBody extends Component {
   }
 
   deleteCelestialBody = () => {
-      axios.delete(`/celestialbodies/${this.props.match.params.id}`).then(res => {
+      axios.delete(`/api/v1/celestialbodies/${this.props.match.params.id}`).then(res => {
           this.setState({redirectToHome: true})
       })
   }
@@ -44,7 +44,7 @@ class CelestialBody extends Component {
   updateCelestialBody = (e) => {
       e.preventDefault()
       axios
-        .put(`/celestialbodies/${this.props.match.params.id}`, {
+        .put(`/api/v1/celestialbodies/${this.props.match.params.id}`, {
             name: this.state.celestialBody.name,
             image: this.state.celestialBody.image,            
             averageDistanceFromEarth: this.state.celestialBody.averageDistanceFromEarth,
@@ -61,12 +61,12 @@ class CelestialBody extends Component {
 
   render() {
     if(this.state.redirectToHome) {
-        return (<Redirect to="/celestialbodies" />)
+        return (<Redirect to="/api/v1/celestialbodies" />)
     }
 
     return (
       <div>
-        <Link to="/celestialbodies">Back to Celestial Bodies</Link>
+        <Link to="/api/v1/celestialbodies">Back to Celestial Bodies</Link>
         <h1>{this.state.celestialBody.name}</h1>
         {
             this.state.isEditFormDisplayed

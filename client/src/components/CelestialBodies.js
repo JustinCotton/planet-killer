@@ -38,7 +38,7 @@ class CelestialBodies extends Component {
   createCelestialBody = (e) => {
     e.preventDefault()
     axios
-        .post('/celestialbodies', {
+        .post('/api/v1/celestialbodies', {
             name: this.state.newCelestialBody.name,
             image: this.state.newCelestialBody.image,
             distanceFromEarth: this.state.newCelestialBody.distanceFromEarth,
@@ -74,7 +74,7 @@ class CelestialBodies extends Component {
                 return (
                     <div key={celestialBody._id}>
                         <Link
-                            to={`/celestialbodies/${celestialBody._id}`}
+                            to={`/api/v1/celestialbodies/${celestialBody._id}`}
                         >
                             {celestialBody.name}
                         </Link>

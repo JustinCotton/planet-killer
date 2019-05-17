@@ -25,7 +25,7 @@ class Planet extends Component {
   }
 
   deletePlanet = () => {
-      axios.delete(`/planets/${this.props.match.params.id}`).then(res => {
+      axios.delete(`/api/v1/planets/${this.props.match.params.id}`).then(res => {
           this.setState({redirectToHome: true})
       })
   }
@@ -45,7 +45,7 @@ class Planet extends Component {
   updatePlanet = (e) => {
       e.preventDefault()
       axios
-        .put(`/planets/${this.props.match.params.id}`, {
+        .put(`/api/v1/planets/${this.props.match.params.id}`, {
             name: this.state.planet.name,
             image: this.state.planet.image,            
             averageDistanceFromEarth: this.state.planet.averageDistanceFromEarth,
@@ -62,12 +62,12 @@ class Planet extends Component {
 
   render() {
     if(this.state.redirectToHome) {
-        return (<Redirect to="/planets" />)
+        return (<Redirect to="/api/v1/planets" />)
     }
 
     return (
       <div>
-        <Link to="/planets">Back to Planets</Link>
+        <Link to="/api/v1/planets">Back to Planets</Link>
         <h1>{this.state.planet.name}</h1>
         {
             this.state.isEditFormDisplayed
