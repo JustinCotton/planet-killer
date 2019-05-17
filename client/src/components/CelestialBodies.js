@@ -31,7 +31,7 @@ class CelestialBodies extends Component {
 
   handleChange = (e) => {
     const cloneNewCelestialBody = {...this.state.newCelestialBody}
-    cloneNewCelestial[e.target.name] = e.target.value
+    cloneNewCelestialBody[e.target.name] = e.target.value
     this.setState({newCelestialBody: cloneNewCelestialBody})
   }
 
@@ -47,7 +47,7 @@ class CelestialBodies extends Component {
         })
         .then(res => {
             const celestialBodyList = [...this.state.celestialBodies]
-            celestialBodiesList.unshift(res.data)
+            celestialBodyList.unshift(res.data)
             this.setState({
                 newCelestialBody: {
                     name: '',
@@ -59,7 +59,7 @@ class CelestialBodies extends Component {
                     destroyed: false
                 },
                 isCelestialBodyFormDisplayed: false,
-                celestialBodies: celestialBodiesList
+                celestialBodies: celestialBodyList
             })
         })
 

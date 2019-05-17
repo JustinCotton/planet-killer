@@ -21,6 +21,10 @@ class CelestialBody extends Component {
       axios.get(`/celestialbodies/${this.props.match.params.id}`).then(res => {
           this.setState({celestialBody: res.data})
       })
+      window.onbeforeunload = function() {
+        this.onUnload();
+        return "";
+    }.bind(this);
   }
 
   deleteCelestialBody = () => {
@@ -67,7 +71,7 @@ class CelestialBody extends Component {
     return (
       <div>
         <Link to="/celestialbodies">Back to Celestial Bodies</Link>
-        <h1>{this.state.celestialBodies.name}</h1>
+        <h1>{this.state.celestialBody.name}</h1>
         {
             this.state.isEditFormDisplayed
                 ? <form onSubmit={this.updateCelestialBody}>

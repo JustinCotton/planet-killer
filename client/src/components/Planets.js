@@ -22,6 +22,10 @@ class Planets extends Component {
     axios.get('/planets').then(res => {
         this.setState({planets: res.data})
     })
+    window.onbeforeunload = function() {
+        this.onUnload();
+        return "";
+    }.bind(this);
   }
 
   togglePlanetForm = () => {

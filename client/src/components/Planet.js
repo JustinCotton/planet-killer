@@ -22,6 +22,10 @@ class Planet extends Component {
       axios.get(`/planets/${this.props.match.params.id}`).then(res => {
           this.setState({planet: res.data})
       })
+      window.onbeforeunload = function() {
+        this.onUnload();
+        return "";
+    }.bind(this);
   }
 
   deletePlanet = () => {
