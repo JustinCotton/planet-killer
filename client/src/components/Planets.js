@@ -19,13 +19,9 @@ class Planets extends Component {
   }
 
   componentDidMount = () => {
-    axios.get('/planets').then(res => {
+    axios.get('/api/v1/planets').then(res => {
         this.setState({planets: res.data})
     })
-    window.onbeforeunload = function() {
-        this.onUnload();
-        return "";
-    }.bind(this);
   }
 
   togglePlanetForm = () => {
@@ -43,15 +39,7 @@ class Planets extends Component {
   createPlanet = (e) => {
     e.preventDefault()
     axios
-        .post('/planets', {
-            name: this.state.newPlanet.name,
-            image: this.state.newPlanet.image,
-            averageDistanceFromEarth: this.state.newPlanet.averageDistanceFromEarth,
-            climate: this.state.newPlanet.climate,
-            meanTemperatureF: this.state.newPlanet.meanTemperatureF,
-            percentOfEarthGravity: this.state.newPlanet.percentOfEarthGravity,
-            moons: this.state.newPlanet.moons
-        })
+        .post('/api/v1/planets', this.state.newPlanet)
         .then(res => {
             const planetsList = [...this.state.planets]
             planetsList.unshift(res.data)

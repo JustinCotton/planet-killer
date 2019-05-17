@@ -18,13 +18,9 @@ class CelestialBody extends Component {
   }
 
   componentDidMount = () => {
-      axios.get(`/celestialbodies/${this.props.match.params.id}`).then(res => {
+      axios.get(`/api/v1/celestialbodies/${this.props.match.params.id}`).then(res => {
           this.setState({celestialBody: res.data})
       })
-      window.onbeforeunload = function() {
-        this.onUnload();
-        return "";
-    }.bind(this);
   }
 
   deleteCelestialBody = () => {

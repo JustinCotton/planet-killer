@@ -18,13 +18,9 @@ class CelestialBodies extends Component {
   }
 
   componentDidMount = () => {
-    axios.get('/celestialBodies').then(res => {
+    axios.get('/api/v1/celestialBodies').then(res => {
         this.setState({celestialBodies: res.data})
     })
-    window.onbeforeunload = function() {
-        this.onUnload();
-        return "";
-    }.bind(this);
   }
 
   toggleCelestialBodyForm = () => {
