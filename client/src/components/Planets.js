@@ -6,9 +6,14 @@ class Planets extends Component {
   state = {
       planets: [],
       newPlanet: {
-          name: '',
-          climate: '',
-          moons: null
+        name: '',
+        image: '',
+        averageDistanceFromEarth: '',
+        climate: '',
+        meanTemperatureF: null,
+        percentOfEarthGravity: '',
+        moons: null,
+        destroyed: false
       },
       isPlanetFormDisplayed: false
   }
@@ -36,7 +41,12 @@ class Planets extends Component {
     axios
         .post('/planets', {
             name: this.state.newPlanet.name,
-            description: this.state.newPlanet.description
+            image: this.state.newPlanet.image,
+            averageDistanceFromEarth: this.state.newPlanet.averageDistanceFromEarth,
+            climate: this.state.newPlanet.climate,
+            meanTemperatureF: this.state.newPlanet.meanTemperatureF,
+            percentOfEarthGravity: this.state.newPlanet.percentOfEarthGravity,
+            moons: this.state.newPlanet.moons
         })
         .then(res => {
             const planetsList = [...this.state.planets]
@@ -44,8 +54,13 @@ class Planets extends Component {
             this.setState({
                 newPlanet: {
                     name: '',
+                    image: '',
+                    averageDistanceFromEarth: '',
                     climate: '',
-                    moons: 0
+                    meanTemperatureF: null,
+                    percentOfEarthGravity: '',
+                    moons: null,
+                    destroyed: false
                 },
                 isPlanetFormDisplayed: false,
                 planets: planetsList
@@ -86,6 +101,26 @@ class Planets extends Component {
                         />
                     </div>
                     <div>
+                        <label htmlFor="image">Image URL</label>
+                        <input
+                            id="image"
+                            type="text"
+                            name="image"
+                            onChange={this.handleChange}
+                            value={this.state.newPlanet.image}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="averageDistanceFromEarth">Average Distance From Earth</label>
+                        <input
+                            id="averageDistanceFromEarth"
+                            type="text"
+                            name="averageDistanceFromEarth"
+                            onChange={this.handleChange}
+                            value={this.state.newPlanet.averageDistanceFromEarth}
+                        />
+                    </div>
+                    <div>
                         <label htmlFor="climate">Climate</label>
                         <textarea
                             id="climate"
@@ -93,6 +128,26 @@ class Planets extends Component {
                             name="climate"
                             onChange={this.handleChange}
                             value={this.state.newPlanet.climate}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="meanTemperatureF">Mean Temperature in &deg;F</label>
+                        <textarea
+                            id="meanTemperatureF"
+                            type="text"
+                            name="meanTemperatureF"
+                            onChange={this.handleChange}
+                            value={this.state.newPlanet.meanTemperatureF}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="percentOfEarthGravity">% of Earth's Gravity</label>
+                        <textarea
+                            id="percentOfEarthGravity"
+                            type="text"
+                            name="percentOfEarthGravity"
+                            onChange={this.handleChange}
+                            value={this.state.newPlanet.percentOfEarthGravity}
                         />
                     </div>
                     <div>

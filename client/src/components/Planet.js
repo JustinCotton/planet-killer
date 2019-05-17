@@ -68,8 +68,7 @@ class Planet extends Component {
     return (
       <div>
         <Link to="/planets">Back to Planets</Link>
-        <h1>Planet</h1>
-        <button onClick={this.toggleEditForm}>Edit</button>
+        <h1>{this.state.planet.name}</h1>
         {
             this.state.isEditFormDisplayed
                 ? <form onSubmit={this.updatePlanet}>
@@ -140,15 +139,15 @@ class Planet extends Component {
                     <button>Update</button>
                 </form>
                 : <div>
-                    <div>Name: {this.state.planet.name}</div>
-                    <div><img src={this.state.planet.image}/></div>
+                    <div><img src={this.state.planet.image} width="200px"/></div>
                     <div>Average Distance From Earth: {this.state.planet.averageDistanceFromEarth}</div>
                     <div>Climate: {this.state.planet.climate}</div>
                     <div>Mean Temperature in &deg;F: {this.state.planet.meanTemperatureF}</div>
                     <div>% of Earth's Gravity: {this.state.planet.percentOfEarthGravity}</div>
                     <div>Number of Moons: {this.state.planet.moons}</div>
                     {/* <div>Destroyed: {this.state.planet.destroyed}</div> */}
-                    <button onClick={this.deletePlanet}>Delete</button>
+                    <div><button onClick={this.toggleEditForm}>Edit</button></div>
+                    <div><button onClick={this.deletePlanet}>Delete</button></div>
                 </div>
         }
       </div>
