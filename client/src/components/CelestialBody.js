@@ -66,7 +66,7 @@ class CelestialBody extends Component {
 
     return (
       <div>
-        <Link to="/api/v1/celestialbodies">Back to Celestial Bodies</Link>
+        <Link to="/celestialbodies">Back to Celestial Bodies</Link>
         <h1>{this.state.celestialBody.name}</h1>
         {
             this.state.isEditFormDisplayed

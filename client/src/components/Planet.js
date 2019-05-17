@@ -67,7 +67,7 @@ class Planet extends Component {
 
     return (
       <div>
-        <Link to="/api/v1/planets">Back to Planets</Link>
+        <Link to="/planets">Back to Planets</Link>
         <h1>{this.state.planet.name}</h1>
         {
             this.state.isEditFormDisplayed
