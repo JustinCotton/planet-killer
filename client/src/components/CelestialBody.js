@@ -87,7 +87,7 @@ class CelestialBody extends Component {
                             id="image"
                             name="image"
                             onChange={this.handleChange}
-                            value={this.state.planet.image}
+                            value={this.state.celestialBody.image}
                         />
                     </div>
                     <div>
@@ -96,7 +96,7 @@ class CelestialBody extends Component {
                             id="averageDistanceFromEarth"
                             name="averageDistanceFromEarth"
                             onChange={this.handleChange}
-                            value={this.state.planet.averageDistanceFromEarth}
+                            value={this.state.celestialBody.averageDistanceFromEarth}
                         />
                     </div>
                     <div>
@@ -105,7 +105,7 @@ class CelestialBody extends Component {
                             id="climate"
                             name="climate"
                             onChange={this.handleChange}
-                            value={this.state.planet.climate}
+                            value={this.state.celestialBody.climate}
                         />
                     </div>
                     <div>
@@ -114,7 +114,7 @@ class CelestialBody extends Component {
                             id="meanTemperatureF"
                             name="meanTemperatureF"
                             onChange={this.handleChange}
-                            value={this.state.planet.meanTemperatureF}
+                            value={this.state.celestialBody.meanTemperatureF}
                         />
                     </div>
                     <div>
@@ -123,7 +123,7 @@ class CelestialBody extends Component {
                             id="percentOfEarthGravity"
                             name="percentOfEarthGravity"
                             onChange={this.handleChange}
-                            value={this.state.planet.percentOfEarthGravity}
+                            value={this.state.celestialBody.percentOfEarthGravity}
                         />
                     </div>
                     <div>
@@ -132,7 +132,7 @@ class CelestialBody extends Component {
                             id="moons"
                             name="moons"
                             onChange={this.handleChange}
-                            value={this.state.planet.moons}
+                            value={this.state.celestialBody.moons}
                         />
                     </div>
                     <button>Update</button>

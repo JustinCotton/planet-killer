@@ -62,7 +62,7 @@ class Planet extends Component {
 
   render() {
     if(this.state.redirectToHome) {
-        return (<Redirect to="/api/v1/planets" />)
+        return (<Redirect to="/planets" />)
     }
 
     return (
@@ -142,8 +142,8 @@ class Planet extends Component {
                     <div><img src={this.state.planet.image} width="200px"/></div>
                     <div>Average Distance From Earth: {this.state.planet.averageDistanceFromEarth}</div>
                     <div>Climate: {this.state.planet.climate}</div>
-                    <div>Mean Temperature in &deg;F: {this.state.planet.meanTemperatureF}</div>
-                    <div>% of Earth's Gravity: {this.state.planet.percentOfEarthGravity}</div>
+                    <div>Mean Temperature: {this.state.planet.meanTemperatureF}&deg;F</div>
+                    <div>Gravity Related to Earth's: {this.state.planet.percentOfEarthGravity}%</div>
                     <div>Number of Moons: {this.state.planet.moons}</div>
                     {/* <div>Destroyed: {this.state.planet.destroyed}</div> */}
                     <div><button onClick={this.toggleEditForm}>Edit</button></div>
