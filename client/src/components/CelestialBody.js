@@ -44,7 +44,7 @@ class CelestialBody extends Component {
   updateCelestialBody = (e) => {
       e.preventDefault()
       axios
-        .put(`/api/v1/celestialbodies/${this.props.match.params.id}`, this.state.celestialBody.destroyed)
+        .put(`/api/v1/celestialbodies/${this.props.match.params.id}`, this.state.celestialBody)
         .then(res => {
             this.setState({celestialBody: res.data, isEditFormDisplayed: false})
         })
