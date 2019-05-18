@@ -44,16 +44,7 @@ class CelestialBody extends Component {
   updateCelestialBody = (e) => {
       e.preventDefault()
       axios
-        .put(`/api/v1/celestialbodies/${this.props.match.params.id}`, {
-            name: this.state.celestialBody.name,
-            image: this.state.celestialBody.image,            
-            averageDistanceFromEarth: this.state.celestialBody.averageDistanceFromEarth,
-            climate: this.state.celestialBody.climate,
-            meanTemperatureF: this.state.celestialBody.meanTemperatureF,
-            percentOfEarthGravity: this.state.celestialBody.percentOfEarthGravity,
-            moons: this.state.celestialBody.moons,
-            destroyed: this.state.celestialBody.destroyed    
-        })
+        .put(`/api/v1/celestialbodies/${this.props.match.params.id}`, this.state.celestialBody.destroyed)
         .then(res => {
             this.setState({celestialBody: res.data, isEditFormDisplayed: false})
         })
@@ -61,7 +52,7 @@ class CelestialBody extends Component {
 
   render() {
     if(this.state.redirectToHome) {
-        return (<Redirect to="/api/v1/celestialbodies" />)
+        return (<Redirect to="/celestialbodies" />)
     }
 
     return (
@@ -91,50 +82,41 @@ class CelestialBody extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="averageDistanceFromEarth">Average Distance From Earth</label>
+                        <label htmlFor="classification">Classification</label>
                         <textarea
-                            id="averageDistanceFromEarth"
-                            name="averageDistanceFromEarth"
+                            id="classification"
+                            name="classification"
                             onChange={this.handleChange}
-                            value={this.state.celestialBody.averageDistanceFromEarth}
+                            value={this.state.celestialBody.classification}
                         />
                     </div>
                     <div>
-                        <label htmlFor="climate">Climate</label>
+                        <label htmlFor="distanceFromEarth">Distance From Earth</label>
                         <textarea
-                            id="climate"
-                            name="climate"
+                            id="distanceFromEarth"
+                            name="distanceFromEarth"
                             onChange={this.handleChange}
-                            value={this.state.celestialBody.climate}
+                            value={this.state.celestialBody.distanceFromEarth}
                         />
                     </div>
                     <div>
-                        <label htmlFor="meanTemperatureF">Mean Temperature in &deg;F</label>
+                        <label htmlFor="galaxy">Galaxy</label>
                         <textarea
-                            id="meanTemperatureF"
-                            name="meanTemperatureF"
+                            id="galaxy"
+                            name="galaxy"
                             onChange={this.handleChange}
-                            value={this.state.celestialBody.meanTemperatureF}
+                            value={this.state.celestialBody.galaxy}
                         />
                     </div>
                     <div>
-                        <label htmlFor="percentOfEarthGravity">% of Earth's Gravity</label>
+                        <label htmlFor="constellation">Constellation</label>
                         <textarea
-                            id="percentOfEarthGravity"
-                            name="percentOfEarthGravity"
+                            id="constellation"
+                            name="constellation"
                             onChange={this.handleChange}
-                            value={this.state.celestialBody.percentOfEarthGravity}
+                            value={this.state.celestialBody.constellation}
                         />
-                    </div>
-                    <div>
-                        <label htmlFor="moons">Number of Moons</label>
-                        <textarea
-                            id="moons"
-                            name="moons"
-                            onChange={this.handleChange}
-                            value={this.state.celestialBody.moons}
-                        />
-                    </div>
+                    </div>                    
                     <button>Update</button>
                 </form>
                 : <div>

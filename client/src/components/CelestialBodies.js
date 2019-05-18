@@ -38,13 +38,7 @@ class CelestialBodies extends Component {
   createCelestialBody = (e) => {
     e.preventDefault()
     axios
-        .post('/api/v1/celestialbodies', {
-            name: this.state.newCelestialBody.name,
-            image: this.state.newCelestialBody.image,
-            distanceFromEarth: this.state.newCelestialBody.distanceFromEarth,
-            galaxy: this.state.newCelestialBody.galaxy,
-            constellation: this.state.newCelestialBody.constellation
-        })
+        .post('/api/v1/celestialbodies', this.state.newCelestialBody)
         .then(res => {
             const celestialBodyList = [...this.state.celestialBodies]
             celestialBodyList.unshift(res.data)

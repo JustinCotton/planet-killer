@@ -45,16 +45,7 @@ class Planet extends Component {
   updatePlanet = (e) => {
       e.preventDefault()
       axios
-        .put(`/api/v1/planets/${this.props.match.params.id}`, {
-            name: this.state.planet.name,
-            image: this.state.planet.image,            
-            averageDistanceFromEarth: this.state.planet.averageDistanceFromEarth,
-            climate: this.state.planet.climate,
-            meanTemperatureF: this.state.planet.meanTemperatureF,
-            percentOfEarthGravity: this.state.planet.percentOfEarthGravity,
-            moons: this.state.planet.moons,
-            destroyed: this.state.planet.destroyed    
-        })
+        .put(`/api/v1/planets/${this.props.match.params.id}`, this.state.planet)
         .then(res => {
             this.setState({planet: res.data, isEditFormDisplayed: false})
         })
@@ -139,7 +130,7 @@ class Planet extends Component {
                     <button>Update</button>
                 </form>
                 : <div>
-                    <div><img src={this.state.planet.image} width="200px"/></div>
+                    <div><img src={this.state.planet.image} width="300px"/></div>
                     <div>Average Distance From Earth: {this.state.planet.averageDistanceFromEarth}</div>
                     <div>Climate: {this.state.planet.climate}</div>
                     <div>Mean Temperature: {this.state.planet.meanTemperatureF}&deg;F</div>
