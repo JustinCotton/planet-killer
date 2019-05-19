@@ -4,12 +4,10 @@ import Planets from './components/Planets'
 import Planet from './components/Planet'
 import CelestialBodies from './components/CelestialBodies'
 import CelestialBody from './components/CelestialBody'
-import Background from './components/stars.jpg';
 
 class App extends Component {
   render () {
     const style = {
-      backgroundImage: "url(" + { Background } + ")",
       fontFamily: "Orbitron",
       textAlign: "center",
       color: "yellow"
@@ -23,7 +21,7 @@ class App extends Component {
       <Router>
         <div style={style}>
           <h1>Planet Killer</h1>
-          <h1>Celestial Bodies of Death!</h1>
+          {/* <h1>Celestial Bodies of Death!</h1> */}
           <div><Link to="/">Back to Command Center</Link></div>
           <div style={stats}>
             <div style={stats}><Link to="/planets">Planets</Link>   <Link to="/celestialbodies">Celestial Bodies</Link></div>   
