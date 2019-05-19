@@ -57,7 +57,7 @@ class CelestialBody extends Component {
 
     return (
       <div>
-        <Link to="/celestialbodies">Back to Celestial Bodies</Link>
+        {/* <Link to="/celestialbodies">Back to Celestial Bodies</Link> */}
         <h1>{this.state.celestialBody.name}</h1>
         {
             this.state.isEditFormDisplayed
@@ -120,7 +120,7 @@ class CelestialBody extends Component {
                     <button>Update</button>
                 </form>
                 : <div>
-                    <div><img src={this.state.celestialBody.image} width="200px"/></div>
+                    <div><img src={this.state.celestialBody.image} width="300px"/></div>
                     <div>Classification: {this.state.celestialBody.classification}</div>
                     <div>Distance From Earth: {this.state.celestialBody.distanceFromEarth}</div>
                     <div>Galaxy: {this.state.celestialBody.galaxy}</div>

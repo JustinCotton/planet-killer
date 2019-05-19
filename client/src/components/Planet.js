@@ -56,9 +56,15 @@ class Planet extends Component {
         return (<Redirect to="/planets" />)
     }
 
+    const stats = {
+        fontSize: "25px",
+        display: "inline-block",
+        color: "yellow"
+    }
+
     return (
       <div>
-        <Link to="/planets">Back to Planets</Link>
+        {/* <Link to="/planets">Back to Planets</Link> */}
         <h1>{this.state.planet.name}</h1>
         {
             this.state.isEditFormDisplayed
@@ -129,7 +135,7 @@ class Planet extends Component {
                     </div>
                     <button>Update</button>
                 </form>
-                : <div>
+                : <div style={stats}>
                     <div><img src={this.state.planet.image} width="300px"/></div>
                     <div>Average Distance From Earth: {this.state.planet.averageDistanceFromEarth}</div>
                     <div>Climate: {this.state.planet.climate}</div>
@@ -137,8 +143,10 @@ class Planet extends Component {
                     <div>Gravity Related to Earth's: {this.state.planet.percentOfEarthGravity}%</div>
                     <div>Number of Moons: {this.state.planet.moons}</div>
                     {/* <div>Destroyed: {this.state.planet.destroyed}</div> */}
-                    <div><button onClick={this.toggleEditForm}>Edit</button></div>
-                    <div><button onClick={this.deletePlanet}>Delete</button></div>
+                    <div>
+                        <button onClick={this.toggleEditForm}>Edit</button>
+                        <button onClick={this.deletePlanet}>Delete</button>
+                    </div>
                 </div>
         }
       </div>
