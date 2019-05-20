@@ -28,19 +28,22 @@ class App extends Component {
       margin: "10px",
       textDecoration: "none"
     }
-    const linkStyle = {
-      margin: "0px",
-      textDecoration: "none"
+    const links = {
+      fontSize: "30px",
+      display: "inline-block",
+      color: "yellow",
+      textDecoration: "none",
+      margin: "0px 20px"
     }
+  
     return (
       <Router>
         <div style={style}>
-          <a href="/" style={linkStyle}><h1 style={titleStyle}>Planet Killer!</h1></a>
           {/* <h1>Celestial Bodies of Death!</h1> */}
-          {/* <div><Link to="/"><h1 style={titleStyle}>Planet Killer!</h1></Link></div> */}
+          <div><Link to="/"><h1 style={titleStyle}>Planet Killer!</h1></Link></div>
           <div style={stats}>
-            <div style={stats}><Link to="/planets">Planets</Link>  <Link to="/celestialbodies">Celestial Bodies</Link>
-          </div>
+            <div style={links}><Link to="/planets">Planets</Link></div> | 
+            <div style={links}><Link to="/celestialbodies">Celestial Bodies</Link></div>
           </div>
           <Switch>
             <Route exact path="/" component={WeaponSystem}/>

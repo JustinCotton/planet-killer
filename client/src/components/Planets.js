@@ -63,16 +63,17 @@ class Planets extends Component {
 
   render() {
     const planetsStyle = {
-        fontSize: "20px",
+        fontSize: "25px",
         display: "inline-block",
         color: "yellow",
         textDecoration: "none",
         margin: "10px",
         borderRadius: "100px",
-        height: "200px"
+        height: "200px",
+        textWeight: "bold"
     }
     const buttonStyle = {
-        margin: "15px"
+        margin: "10px"
     }
     return (
       <div>

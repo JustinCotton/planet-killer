@@ -64,11 +64,14 @@ class CelestialBody extends Component {
         borderRadius: "150px",
         height: "300px"
     }
+    const celestialBodyName = {
+        fontSize: "40px",
+    }
 
     return (
       <div>
         {/* <Link to="/celestialbodies">Back to Celestial Bodies</Link> */}
-        <h1>{this.state.celestialBody.name}</h1>
+        <h1 style={celestialBodyName}>{this.state.celestialBody.name}</h1>
         {
             this.state.isEditFormDisplayed
                 ? <form onSubmit={this.updateCelestialBody}>

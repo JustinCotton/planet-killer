@@ -15,6 +15,10 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+}
+
 a:link {
   color: yellow;
 }

@@ -66,9 +66,12 @@ class Planet extends Component {
         borderRadius: "150px",
         height: "300px"
     }
+    const planetName = {
+        fontSize: "40px",
+    }
     return (
       <div>
-        <h1>{this.state.planet.name}</h1>
+        <h1 style={planetName}>{this.state.planet.name}</h1>
         {
             this.state.isEditFormDisplayed
                 ? <form onSubmit={this.updatePlanet}>
