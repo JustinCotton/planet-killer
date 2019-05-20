@@ -64,7 +64,8 @@ class Planet extends Component {
     }
     const planetStyle = {
         borderRadius: "150px",
-        height: "300px"
+        height: "300px",
+        margin: "15px"
     }
     const planetName = {
         fontSize: "40px",
