@@ -39,7 +39,7 @@ class App extends Component {
           {/* <h1>Celestial Bodies of Death!</h1> */}
           {/* <div><Link to="/"><h1 style={titleStyle}>Planet Killer!</h1></Link></div> */}
           <div style={stats}>
-            <div style={stats}><Link to="/planets">Planets</Link>   <Link to="/celestialbodies">Celestial Bodies</Link>
+            <div style={stats}><Link to="/planets">Planets</Link>  <Link to="/celestialbodies">Celestial Bodies</Link>
           </div>
           </div>
           <Switch>

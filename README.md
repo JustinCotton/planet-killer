@@ -24,12 +24,6 @@ Full-stack MERN application, leveraging a third-party API, and deployed to Herok
 
   * Searching the cosmos for celestial bodies...and destroying them!
 
-## Wireframe / Whiteboarding
-
-![Wireframe](image)
-
-![Whiteboarding](image)
-
 ## Future Development
 
   * Animations!
