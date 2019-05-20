@@ -20,7 +20,7 @@ class App extends Component {
       textDecoration: "none"
     }
     const titleStyle = {
-      fontSize: "70px",
+      fontSize: "65px",
       fontFamily: "Audiowide",
       // fontFamily: "Press Start 2P",
       textAlign: "center",
