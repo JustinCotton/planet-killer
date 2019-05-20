@@ -1,7 +1,7 @@
 # Planet Killer: Celestial Bodies of Death!
 ## Overview
 
-Full-stack MERN application, leveraging a third-party API, and deployed to Heroku
+Full-stack MERN (MongoDB, Express, React, Node.js) application deployed to Heroku
 
 **Live site:** <https://planet-killer.herokuapp.com/>
 
