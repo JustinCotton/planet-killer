@@ -62,13 +62,14 @@ class Planets extends Component {
   }
 
   render() {
-    const planetStyle = {
+    const planetsStyle = {
         fontSize: "20px",
         display: "inline-block",
         color: "yellow",
         textDecoration: "none",
-        margin: "15px",
-        borderRadius: "20px"
+        margin: "10px",
+        borderRadius: "100px",
+        height: "200px"
     }
     const buttonStyle = {
         margin: "15px"
@@ -166,8 +167,8 @@ class Planets extends Component {
                       {
                         this.state.planets.map(planet => {
                             return (
-                                <div key={planet._id} style={planetStyle}>                        
-                                    <Link to={`/planets/${planet._id}`}><img src={planet.image} height="200px"/><br></br>{planet.name}</Link>
+                                <div key={planet._id} style={planetsStyle}>                        
+                                    <Link to={`/planets/${planet._id}`}><img src={planet.image} style={planetsStyle}/><br></br>{planet.name}</Link>
                                 </div>
                             )
                         })

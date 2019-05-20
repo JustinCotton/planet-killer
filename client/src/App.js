@@ -4,6 +4,7 @@ import Planets from './components/Planets'
 import Planet from './components/Planet'
 import CelestialBodies from './components/CelestialBodies'
 import CelestialBody from './components/CelestialBody'
+import WeaponSystem from './components/WeaponSystem'
 
 class App extends Component {
   render () {
@@ -38,9 +39,11 @@ class App extends Component {
           {/* <h1>Celestial Bodies of Death!</h1> */}
           {/* <div><Link to="/"><h1 style={titleStyle}>Planet Killer!</h1></Link></div> */}
           <div style={stats}>
-            <div style={stats}><Link to="/planets">Planets</Link>   <Link to="/celestialbodies">Celestial Bodies</Link></div>   
+            <div style={stats}><Link to="/planets">Planets</Link>   <Link to="/celestialbodies">Celestial Bodies</Link>
+          </div>
           </div>
           <Switch>
+            <Route exact path="/" component={WeaponSystem}/>
             <Route exact path="/planets" component={Planets}/>
             <Route path="/planets/:id" component={Planet}/>
             <Route exact path="/celestialbodies" component={CelestialBodies}/>

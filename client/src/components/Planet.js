@@ -59,9 +59,13 @@ class Planet extends Component {
     const stats = {
         fontSize: "25px",
         display: "inline-block",
-        color: "yellow"
+        color: "yellow",
+        fontWeight: "bold"
     }
-
+    const planetStyle = {
+        borderRadius: "150px",
+        height: "300px"
+    }
     return (
       <div>
         <h1>{this.state.planet.name}</h1>
@@ -135,7 +139,7 @@ class Planet extends Component {
                     <button>Update</button>
                 </form>
                 : <div style={stats}>
-                    <div><img src={this.state.planet.image} width="300px"/></div>
+                    <div><img src={this.state.planet.image} style={planetStyle}/></div>
                     <div>Average Distance From Earth: {this.state.planet.averageDistanceFromEarth}</div>
                     <div>Climate: {this.state.planet.climate}</div>
                     <div>Mean Temperature: {this.state.planet.meanTemperatureF}&deg;F</div>
