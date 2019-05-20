@@ -77,16 +77,6 @@ class Planets extends Component {
     return (
       <div>
         <h1>Planets</h1>
-        {/* {
-            this.state.planets.map(planet => {
-                return (
-                    <div key={planet._id} style={planetStyle}>                        
-                        <Link to={`/planets/${planet._id}`}><img src={planet.image} width="200px"/><br></br>{planet.name}</Link>
-                    </div>
-                )
-            })
-        }
-        <div><button onClick={this.togglePlanetForm} style={buttonStyle}>Add New Planet</button></div> */}
         {
             this.state.isPlanetFormDisplayed
                 ? <form onSubmit={this.createPlanet}>

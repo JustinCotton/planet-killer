@@ -60,23 +60,21 @@ class CelestialBodies extends Component {
   }
 
   render() {
+    const celestialBodiesStyle = {
+        fontSize: "20px",
+        display: "inline-block",
+        color: "yellow",
+        textDecoration: "none",
+        margin: "10px",
+        borderRadius: "100px",
+        height: "200px"
+    }
+    const buttonStyle = {
+        margin: "15px"
+    }
     return (
       <div>
         <h1>Celestial Bodies</h1>
-        {
-            this.state.celestialBodies.map(celestialBody => {
-                return (
-                    <div key={celestialBody._id}>
-                        <Link
-                            to={`/celestialbodies/${celestialBody._id}`}
-                        >
-                            {celestialBody.name}
-                        </Link>
-                    </div>
-                )
-            })
-        }
-        <button onClick={this.toggleCelestialBodyForm}>Add New Celestial Body</button>
         {
             this.state.isCelestialBodyFormDisplayed
                 ? <form onSubmit={this.createCelestialBody}>
@@ -142,7 +140,18 @@ class CelestialBodies extends Component {
                     </div>
                     <button>Create</button>
                 </form>
-                : null
+                : <div>
+                <div><button onClick={this.toggleCelestialBodyForm} style={buttonStyle}>Add New Celestial Body</button></div>
+                  {
+                    this.state.celestialBodies.map(celestialBody => {
+                        return (
+                            <div key={celestialBody._id} style={celestialBodiesStyle}>                  
+                                <Link to={`/celestialbodies/${celestialBody._id}`}><img src={celestialBody.image} style={celestialBodiesStyle}/><br></br>{celestialBody.name}</Link>
+                            </div>
+                        )
+                    })
+                  }
+            </div>
         }
       </div>
     )

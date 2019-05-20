@@ -146,7 +146,7 @@ class Planet extends Component {
                     <div>Gravity Related to Earth's: {this.state.planet.percentOfEarthGravity}%</div>
                     <div>Number of Moons: {this.state.planet.moons}</div>
                     {/* <div>Destroyed: {this.state.planet.destroyed}</div> */}
-                    <div>
+                    <div> 
                         <button onClick={this.toggleEditForm}>Edit</button>
                         <button onClick={this.deletePlanet}>Delete</button>
                     </div>

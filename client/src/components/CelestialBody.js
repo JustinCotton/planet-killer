@@ -54,6 +54,16 @@ class CelestialBody extends Component {
     if(this.state.redirectToHome) {
         return (<Redirect to="/celestialbodies" />)
     }
+    const stats = {
+        fontSize: "25px",
+        display: "inline-block",
+        color: "yellow",
+        fontWeight: "bold"
+    }
+    const celestialBodyStyle = {
+        borderRadius: "150px",
+        height: "300px"
+    }
 
     return (
       <div>
@@ -119,15 +129,17 @@ class CelestialBody extends Component {
                     </div>                    
                     <button>Update</button>
                 </form>
-                : <div>
-                    <div><img src={this.state.celestialBody.image} width="300px"/></div>
+                : <div style={stats}>
+                    <div><img src={this.state.celestialBody.image} style={celestialBodyStyle}/></div>
                     <div>Classification: {this.state.celestialBody.classification}</div>
                     <div>Distance From Earth: {this.state.celestialBody.distanceFromEarth}</div>
                     <div>Galaxy: {this.state.celestialBody.galaxy}</div>
                     <div>Constellation: {this.state.celestialBody.constellation}</div>
                     {/* <div>Destroyed: {this.state.celestialBody.destroyed}</div> */}
-                    <div><button onClick={this.toggleEditForm}>Edit</button></div>
-                    <div><button onClick={this.deleteCelestialBody}>Delete</button></div>
+                    <div>
+                        <button onClick={this.toggleEditForm}>Edit</button>
+                        <button onClick={this.deleteCelestialBody}>Delete</button>
+                    </div>
                 </div>
         }
       </div>
