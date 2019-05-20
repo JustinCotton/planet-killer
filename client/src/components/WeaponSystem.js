@@ -5,7 +5,7 @@ class WeaponSystem extends Component {
 
   render() {
     const imgStyle = {
-        width: "1100px",
+        width: "80%",
         margin: "20px",
         borderRadius: "300px"
       }
