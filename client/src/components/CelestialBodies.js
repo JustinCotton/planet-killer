@@ -71,7 +71,7 @@ class CelestialBodies extends Component {
         textWeight: "bold"
     }
     const buttonStyle = {
-        margin: "15px"
+        margin: "10px"
     }
     return (
       <div>
