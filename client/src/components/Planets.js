@@ -67,7 +67,8 @@ class Planets extends Component {
         display: "inline-block",
         color: "yellow",
         textDecoration: "none",
-        margin: "15px"
+        margin: "15px",
+        borderRadius: "20px"
     }
     const buttonStyle = {
         margin: "15px"
@@ -75,7 +76,7 @@ class Planets extends Component {
     return (
       <div>
         <h1>Planets</h1>
-        {
+        {/* {
             this.state.planets.map(planet => {
                 return (
                     <div key={planet._id} style={planetStyle}>                        
@@ -84,7 +85,7 @@ class Planets extends Component {
                 )
             })
         }
-        <div><button onClick={this.togglePlanetForm} style={buttonStyle}>Add New Planet</button></div>
+        <div><button onClick={this.togglePlanetForm} style={buttonStyle}>Add New Planet</button></div> */}
         {
             this.state.isPlanetFormDisplayed
                 ? <form onSubmit={this.createPlanet}>
@@ -160,7 +161,18 @@ class Planets extends Component {
                     </div>
                     <button>Create</button>
                 </form>
-                : null
+                : <div>
+                    <div><button onClick={this.togglePlanetForm} style={buttonStyle}>Add New Planet</button></div>
+                      {
+                        this.state.planets.map(planet => {
+                            return (
+                                <div key={planet._id} style={planetStyle}>                        
+                                    <Link to={`/planets/${planet._id}`}><img src={planet.image} height="200px"/><br></br>{planet.name}</Link>
+                                </div>
+                            )
+                        })
+                      }
+                </div>
         }
       </div>
     )

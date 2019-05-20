@@ -15,14 +15,28 @@ class App extends Component {
     const stats = {
       fontSize: "30px",
       display: "inline-block",
-      color: "yellow"
+      color: "yellow",
+      textDecoration: "none"
+    }
+    const titleStyle = {
+      fontSize: "70px",
+      fontFamily: "Audiowide",
+      // fontFamily: "Press Start 2P",
+      textAlign: "center",
+      color: "yellow",
+      margin: "10px",
+      textDecoration: "none"
+    }
+    const linkStyle = {
+      margin: "0px",
+      textDecoration: "none"
     }
     return (
       <Router>
         <div style={style}>
-          <h1>Planet Killer</h1>
+          <a href="/" style={linkStyle}><h1 style={titleStyle}>Planet Killer!</h1></a>
           {/* <h1>Celestial Bodies of Death!</h1> */}
-          <div><Link to="/">Back to Command Center</Link></div>
+          {/* <div><Link to="/"><h1 style={titleStyle}>Planet Killer!</h1></Link></div> */}
           <div style={stats}>
             <div style={stats}><Link to="/planets">Planets</Link>   <Link to="/celestialbodies">Celestial Bodies</Link></div>   
           </div>
