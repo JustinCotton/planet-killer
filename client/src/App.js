@@ -40,7 +40,7 @@ class App extends Component {
       <Router>
         <div style={style}>
           {/* <h1>Celestial Bodies of Death!</h1> */}
-          <div><Link to="/"><h1 style={titleStyle}>Planet Killer!</h1></Link></div>
+          <div><Link to="/"><h1 style={titleStyle}>PLANET KILLER!</h1></Link></div>
           <div style={stats}>
             <div style={links}><Link to="/planets">Planets</Link></div> | 
             <div style={links}><Link to="/celestialbodies">Celestial Bodies</Link></div>
