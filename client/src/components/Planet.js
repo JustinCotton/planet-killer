@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Redirect, Link } from 'react-router-dom';
 import axios from "axios";
-import ControlPanel from './ControlPanel'
 
 class Planet extends Component {
   state = {
@@ -163,7 +162,6 @@ class Planet extends Component {
                     <div>Number of Moons: {this.state.planet.moons}</div>
                     {/* <div>Destroyed: {this.state.planet.destroyed}</div> */}
                     <div> 
-                        {/* <button onClick={this.toggleEditForm} className="greenButton">Spare</button> */}
                         <Link to="/planets"><button className="greenButton">Spare</button></Link>
                         <button onClick={this.toggleEditForm} className="yellowButton">Transform</button>
                         <button onClick={this.deletePlanet} className="redButton">Destroy</button>

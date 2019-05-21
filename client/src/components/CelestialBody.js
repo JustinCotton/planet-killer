@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Redirect, Link } from 'react-router-dom';
 import axios from "axios";
-import ControlPanel from './ControlPanel'
 
 class CelestialBody extends Component {
   state = {
