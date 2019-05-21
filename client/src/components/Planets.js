@@ -171,7 +171,7 @@ class Planets extends Component {
                 </form>
                 </div>
                 : <div>
-                    <h1>Planets</h1>                 
+                    <h1 style={planetName}>Planets</h1>                 
                       {
                         this.state.planets.map(planet => {
                             return (

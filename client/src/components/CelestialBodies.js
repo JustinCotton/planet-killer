@@ -77,6 +77,7 @@ class CelestialBodies extends Component {
     }
     const celestialBodyName = {
         fontSize: "40px",
+        margin: "15px 0px 0px"
     }
     const formStyle = {
         fontSize: "25px",
@@ -156,7 +157,7 @@ class CelestialBodies extends Component {
                 </form>
                 </div>
                 : <div>
-                    <h1>Celestial Bodies</h1>
+                    <h1 style={celestialBodyName}>Celestial Bodies</h1>
                   {
                     this.state.celestialBodies.map(celestialBody => {
                         return (
