@@ -68,7 +68,7 @@ class CelestialBodies extends Component {
         margin: "10px",
         borderRadius: "100px",
         height: "200px",
-        textWeight: "bold"
+        fontWeight: "bold"
     }
     const celestialBodyStyle = {
         borderRadius: "150px",

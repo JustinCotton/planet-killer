@@ -69,7 +69,7 @@ class Planets extends Component {
         margin: "10px",
         borderRadius: "100px",
         height: "200px",
-        textWeight: "bold"
+        fontWeight: "bold"
     }
     const wrapperStyle = {
         margin: "20px 0px"
