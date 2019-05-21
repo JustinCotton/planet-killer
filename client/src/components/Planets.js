@@ -71,20 +71,33 @@ class Planets extends Component {
         height: "200px",
         textWeight: "bold"
     }
-    const buttonStyle = {
-        margin: "10px"
-    }
     const wrapperStyle = {
         margin: "20px 0px"
     }
+    const planetStyle = {
+        borderRadius: "150px",
+        height: "300px",
+        margin: "10px"
+    }
+    const planetName = {
+        fontSize: "40px",
+        margin: "15px 0px 0px"
+    }
+    const formStyle = {
+        fontSize: "25px",
+        margin: "15px 0px 0px",
+        fontWeight: "bold"
+    }
+
     return (
       <div style={wrapperStyle}>
-        <h1>Planets</h1>
         {
             this.state.isPlanetFormDisplayed
-                ? <form onSubmit={this.createPlanet}>
+                ? <div><h1 style={planetName}>Create {this.state.newPlanet.name}</h1>
+                <div><img src={this.state.newPlanet.image} style={planetStyle}/></div>
+                <form onSubmit={this.createPlanet} style={formStyle}>
                     <div>
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="name">Name: </label>
                         <input
                             id="name"
                             type="text"
@@ -94,7 +107,7 @@ class Planets extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="image">Image URL</label>
+                        <label htmlFor="image">Image URL: </label>
                         <input
                             id="image"
                             type="text"
@@ -104,7 +117,7 @@ class Planets extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="averageDistanceFromEarth">Average Distance From Earth</label>
+                        <label htmlFor="averageDistanceFromEarth">Average Distance From Earth: </label>
                         <input
                             id="averageDistanceFromEarth"
                             type="text"
@@ -114,7 +127,7 @@ class Planets extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="climate">Climate</label>
+                        <label htmlFor="climate">Climate: </label>
                         <textarea
                             id="climate"
                             type="text"
@@ -124,7 +137,7 @@ class Planets extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="meanTemperatureF">Mean Temperature in &deg;F</label>
+                        <label htmlFor="meanTemperatureF">Mean Temperature in &deg;F: </label>
                         <textarea
                             id="meanTemperatureF"
                             type="text"
@@ -134,7 +147,7 @@ class Planets extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="percentOfEarthGravity">% of Earth's Gravity</label>
+                        <label htmlFor="percentOfEarthGravity">% of Earth's Gravity: </label>
                         <textarea
                             id="percentOfEarthGravity"
                             type="text"
@@ -144,7 +157,7 @@ class Planets extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="moons">Moons</label>
+                        <label htmlFor="moons">Moons: </label>
                         <textarea
                             id="moons"
                             type="text"
@@ -156,7 +169,9 @@ class Planets extends Component {
                     <button className="purpleButton">Create {this.state.newPlanet.name}</button>
                     <button onClick={this.togglePlanetForm} className="blueButton">Cancel</button>
                 </form>
-                : <div>                    
+                </div>
+                : <div>
+                    <h1>Planets</h1>                 
                       {
                         this.state.planets.map(planet => {
                             return (
