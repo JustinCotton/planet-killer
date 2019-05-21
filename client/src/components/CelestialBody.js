@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Redirect, Link } from 'react-router-dom';
 import axios from "axios";
+import ControlPanel from './ControlPanel'
 
 class CelestialBody extends Component {
   state = {
@@ -68,16 +69,21 @@ class CelestialBody extends Component {
     const celestialBodyName = {
         fontSize: "40px",
     }
+    const formStyle = {
+        fontSize: "25px",
+        margin: "15px 0px 0px",
+        fontWeight: "bold"
+    }
 
     return (
       <div>
-        {/* <Link to="/celestialbodies">Back to Celestial Bodies</Link> */}
-        <h1 style={celestialBodyName}>{this.state.celestialBody.name}</h1>
         {
             this.state.isEditFormDisplayed
-                ? <form onSubmit={this.updateCelestialBody}>
+                ? <div><h1 style={celestialBodyName}>Transform {this.state.celestialBody.name}</h1>
+                <div><img src={this.state.celestialBody.image} style={celestialBodyStyle}/></div> 
+                <form onSubmit={this.updateCelestialBody} style={formStyle}>
                     <div>
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="name">Name: </label>
                         <input
                             id="name"
                             type="text"
@@ -87,7 +93,7 @@ class CelestialBody extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="image">Image URL</label>
+                        <label htmlFor="image">Image URL: </label>
                         <textarea
                             id="image"
                             name="image"
@@ -96,7 +102,7 @@ class CelestialBody extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="classification">Classification</label>
+                        <label htmlFor="classification">Classification: </label>
                         <textarea
                             id="classification"
                             name="classification"
@@ -105,7 +111,7 @@ class CelestialBody extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="distanceFromEarth">Distance From Earth</label>
+                        <label htmlFor="distanceFromEarth">Distance From Earth: </label>
                         <textarea
                             id="distanceFromEarth"
                             name="distanceFromEarth"
@@ -114,7 +120,7 @@ class CelestialBody extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="galaxy">Galaxy</label>
+                        <label htmlFor="galaxy">Galaxy: </label>
                         <textarea
                             id="galaxy"
                             name="galaxy"
@@ -123,7 +129,7 @@ class CelestialBody extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="constellation">Constellation</label>
+                        <label htmlFor="constellation">Constellation: </label>
                         <textarea
                             id="constellation"
                             name="constellation"
@@ -133,7 +139,8 @@ class CelestialBody extends Component {
                     </div>                    
                     <button>Update</button>
                 </form>
-                : <div style={stats}>
+                </div>
+              : <div style={stats}>
                     <div><img src={this.state.celestialBody.image} style={celestialBodyStyle}/></div>
                     <div>Classification: {this.state.celestialBody.classification}</div>
                     <div>Distance From Earth: {this.state.celestialBody.distanceFromEarth}</div>
@@ -143,6 +150,7 @@ class CelestialBody extends Component {
                     <div>
                         <button onClick={this.toggleEditForm}>Edit</button>
                         <button onClick={this.deleteCelestialBody}>Delete</button>
+                        <ControlPanel />
                     </div>
                 </div>
         }

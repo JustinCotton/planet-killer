@@ -19,6 +19,7 @@ const Button = styled.a`
   &:active{
     transform: translate(0px, 5px);
     box-shadow: 0px 1px 0px 0px;
+    color: white;
   }
 `;
 
@@ -36,7 +37,7 @@ const TransformButton = styled(Button)`
   &:hover{
     background-color: #FFDE29;
   }
-`
+`;
 
 const DestroyButton = styled(Button)`
   background-color: #e74c3c;
@@ -53,10 +54,10 @@ class ControlPanel extends Component {
         <SpareButton>
           Spare
         </SpareButton>
-        <TransformButton onClick={Planet.toggleEditForm}>
+        <TransformButton onClick={this.toggleEditForm}>
           Transform
         </TransformButton>
-        <DestroyButton onClick={Planet.deletePlanet}>
+        <DestroyButton onClick={this.deletePlanet}>
           Destroy
         </DestroyButton>
       </div>

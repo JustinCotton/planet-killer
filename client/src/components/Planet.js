@@ -10,9 +10,9 @@ class Planet extends Component {
           image: '',
           averageDistanceFromEarth: '',
           climate: '',
-          meanTemperatureF: 0,
+          meanTemperatureF: null,
           percentOfEarthGravity: '',
-          moons: 0,
+          moons: null,
           destroyed: false          
       },
       redirectToHome: false,
@@ -72,14 +72,21 @@ class Planet extends Component {
         fontSize: "40px",
         margin: "15px 0px 0px"
     }
+    const formStyle = {
+        fontSize: "25px",
+        margin: "15px 0px 0px",
+        fontWeight: "bold"
+    }
+
     return (
       <div>
-        <h1 style={planetName}>{this.state.planet.name}</h1>
         {
             this.state.isEditFormDisplayed
-                ? <form onSubmit={this.updatePlanet}>
+                ? <div><h1 style={planetName}>Transform {this.state.planet.name}</h1>
+                <div><img src={this.state.planet.image} style={planetStyle}/></div>
+                <form onSubmit={this.updatePlanet} style={formStyle}>
                     <div>
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="name">Name: </label>
                         <input
                             id="name"
                             type="text"
@@ -89,7 +96,7 @@ class Planet extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="image">Image URL</label>
+                        <label htmlFor="image">Image URL: </label>
                         <textarea
                             id="image"
                             name="image"
@@ -98,7 +105,7 @@ class Planet extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="averageDistanceFromEarth">Average Distance From Earth</label>
+                        <label htmlFor="averageDistanceFromEarth">Average Distance From Earth: </label>
                         <textarea
                             id="averageDistanceFromEarth"
                             name="averageDistanceFromEarth"
@@ -107,7 +114,7 @@ class Planet extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="climate">Climate</label>
+                        <label htmlFor="climate">Climate: </label>
                         <textarea
                             id="climate"
                             name="climate"
@@ -116,7 +123,7 @@ class Planet extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="meanTemperatureF">Mean Temperature in &deg;F</label>
+                        <label htmlFor="meanTemperatureF">Mean Temperature in &deg;F: </label>
                         <textarea
                             id="meanTemperatureF"
                             name="meanTemperatureF"
@@ -125,7 +132,7 @@ class Planet extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="percentOfEarthGravity">% of Earth's Gravity</label>
+                        <label htmlFor="percentOfEarthGravity">% of Earth's Gravity: </label>
                         <textarea
                             id="percentOfEarthGravity"
                             name="percentOfEarthGravity"
@@ -134,7 +141,7 @@ class Planet extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="moons">Number of Moons</label>
+                        <label htmlFor="moons">Number of Moons: </label>
                         <textarea
                             id="moons"
                             name="moons"
@@ -142,9 +149,12 @@ class Planet extends Component {
                             value={this.state.planet.moons}
                         />
                     </div>
-                    <button>Update</button>
+                    <button className="yellowButton">Transform into {this.state.planet.name}</button>
+                    <button onClick={this.toggleEditForm} className="blueButton">Cancel</button>
                 </form>
+                </div>
                 : <div style={stats}>
+                    <h1 style={planetName}>{this.state.planet.name}</h1>
                     <div><img src={this.state.planet.image} style={planetStyle}/></div>
                     <div>Average Distance From Earth: {this.state.planet.averageDistanceFromEarth}</div>
                     <div>Climate: {this.state.planet.climate}</div>
@@ -153,8 +163,9 @@ class Planet extends Component {
                     <div>Number of Moons: {this.state.planet.moons}</div>
                     {/* <div>Destroyed: {this.state.planet.destroyed}</div> */}
                     <div> 
-                        <button onClick={this.toggleEditForm}>Edit</button>
-                        <button onClick={this.deletePlanet}>Delete</button>
+                        <button onClick={this.toggleEditForm} className="greenButton">Spare</button>
+                        <button onClick={this.toggleEditForm} className="yellowButton">Transform</button>
+                        <button onClick={this.deletePlanet} className="redButton">Destroy</button>
                         {/* <ControlPanel /> */}
                     </div>
                 </div>

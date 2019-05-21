@@ -58,7 +58,6 @@ class Planets extends Component {
                 planets: planetsList
             })
         })
-
   }
 
   render() {
@@ -75,8 +74,11 @@ class Planets extends Component {
     const buttonStyle = {
         margin: "10px"
     }
+    const wrapperStyle = {
+        margin: "20px 0px"
+    }
     return (
-      <div>
+      <div style={wrapperStyle}>
         <h1>Planets</h1>
         {
             this.state.isPlanetFormDisplayed
@@ -151,10 +153,10 @@ class Planets extends Component {
                             value={this.state.newPlanet.moons}
                         />
                     </div>
-                    <button>Create</button>
+                    <button className="purpleButton">Create {this.state.newPlanet.name}</button>
+                    <button onClick={this.togglePlanetForm} className="blueButton">Cancel</button>
                 </form>
-                : <div>
-                    <div><button onClick={this.togglePlanetForm} style={buttonStyle}>Add New Planet</button></div>
+                : <div>                    
                       {
                         this.state.planets.map(planet => {
                             return (
@@ -164,6 +166,7 @@ class Planets extends Component {
                             )
                         })
                       }
+                      <div><button onClick={this.togglePlanetForm} className="purpleButton">Create New Planet</button></div>
                 </div>
         }
       </div>
