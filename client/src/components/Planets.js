@@ -98,7 +98,7 @@ class Planets extends Component {
                 <form onSubmit={this.createPlanet} style={formStyle}>
                     <div>
                         <label htmlFor="name">Name: </label>
-                        <input
+                        <textarea
                             id="name"
                             type="text"
                             name="name"
@@ -108,7 +108,7 @@ class Planets extends Component {
                     </div>
                     <div>
                         <label htmlFor="image">Image URL: </label>
-                        <input
+                        <textarea
                             id="image"
                             type="text"
                             name="image"
@@ -118,7 +118,7 @@ class Planets extends Component {
                     </div>
                     <div>
                         <label htmlFor="averageDistanceFromEarth">Average Distance From Earth: </label>
-                        <input
+                        <textarea
                             id="averageDistanceFromEarth"
                             type="text"
                             name="averageDistanceFromEarth"

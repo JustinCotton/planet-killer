@@ -93,7 +93,7 @@ class CelestialBodies extends Component {
                 <form onSubmit={this.createCelestialBody} style={formStyle}>
                     <div>
                         <label htmlFor="name">Name: </label>
-                        <input
+                        <textarea
                             id="name"
                             type="text"
                             name="name"
@@ -103,7 +103,7 @@ class CelestialBodies extends Component {
                     </div>
                     <div>
                         <label htmlFor="image">Image URL: </label>
-                        <input
+                        <textarea
                             id="image"
                             type="text"
                             name="image"
@@ -113,7 +113,7 @@ class CelestialBodies extends Component {
                     </div>
                     <div>
                         <label htmlFor="classification">Classification: </label>
-                        <input
+                        <textarea
                             id="classification"
                             type="text"
                             name="classification"

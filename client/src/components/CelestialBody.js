@@ -84,7 +84,7 @@ class CelestialBody extends Component {
                 <form onSubmit={this.updateCelestialBody} style={formStyle}>
                     <div>
                         <label htmlFor="name">Name: </label>
-                        <input
+                        <textarea
                             id="name"
                             type="text"
                             name="name"

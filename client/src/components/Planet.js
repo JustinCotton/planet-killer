@@ -87,7 +87,7 @@ class Planet extends Component {
                 <form onSubmit={this.updatePlanet} style={formStyle}>
                     <div>
                         <label htmlFor="name">Name: </label>
-                        <input
+                        <textarea
                             id="name"
                             type="text"
                             name="name"
