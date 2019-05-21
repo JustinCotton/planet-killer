@@ -70,17 +70,30 @@ class CelestialBodies extends Component {
         height: "200px",
         textWeight: "bold"
     }
-    const buttonStyle = {
+    const celestialBodyStyle = {
+        borderRadius: "150px",
+        height: "300px",
         margin: "10px"
     }
+    const celestialBodyName = {
+        fontSize: "40px",
+        margin: "15px 0px 0px"
+    }
+    const formStyle = {
+        fontSize: "25px",
+        margin: "15px 0px 0px",
+        fontWeight: "bold"
+    }
+
     return (
       <div>
-        <h1>Celestial Bodies</h1>
         {
             this.state.isCelestialBodyFormDisplayed
-                ? <form onSubmit={this.createCelestialBody}>
+                ? <div><h1 style={celestialBodyName}>Create {this.state.newCelestialBody.name}</h1>
+                <div><img src={this.state.newCelestialBody.image} style={celestialBodyStyle}/></div> 
+                <form onSubmit={this.createCelestialBody} style={formStyle}>
                     <div>
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="name">Name: </label>
                         <input
                             id="name"
                             type="text"
@@ -90,7 +103,7 @@ class CelestialBodies extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="image">Image URL</label>
+                        <label htmlFor="image">Image URL: </label>
                         <input
                             id="image"
                             type="text"
@@ -100,7 +113,7 @@ class CelestialBodies extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="classification">Classification</label>
+                        <label htmlFor="classification">Classification: </label>
                         <input
                             id="classification"
                             type="text"
@@ -110,7 +123,7 @@ class CelestialBodies extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="distanceFromEarth">Distance From Earth</label>
+                        <label htmlFor="distanceFromEarth">Distance From Earth: </label>
                         <textarea
                             id="distanceFromEarth"
                             type="text"
@@ -120,7 +133,7 @@ class CelestialBodies extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="galaxy">Galaxy</label>
+                        <label htmlFor="galaxy">Galaxy: </label>
                         <textarea
                             id="galaxy"
                             type="text"
@@ -130,7 +143,7 @@ class CelestialBodies extends Component {
                         />
                     </div>
                     <div>
-                        <label htmlFor="constellation">Constellation</label>
+                        <label htmlFor="constellation">Constellation: </label>
                         <textarea
                             id="constellation"
                             type="text"
@@ -139,10 +152,12 @@ class CelestialBodies extends Component {
                             value={this.state.newCelestialBody.constellation}
                         />
                     </div>
-                    <button>Create</button>
+                    <button className="purpleButton">Create {this.state.newCelestialBody.name}</button>
+                    <button onClick={this.toggleCelestialBodyForm} className="blueButton">Cancel</button>
                 </form>
+                </div>
                 : <div>
-                <div><button onClick={this.toggleCelestialBodyForm} style={buttonStyle}>Add New Celestial Body</button></div>
+                    <h1>Celestial Bodies</h1>
                   {
                     this.state.celestialBodies.map(celestialBody => {
                         return (
@@ -152,6 +167,7 @@ class CelestialBodies extends Component {
                         )
                     })
                   }
+                  <div><button onClick={this.toggleCelestialBodyForm} className="purpleButton">Add New Celestial Body</button></div>
             </div>
         }
       </div>
