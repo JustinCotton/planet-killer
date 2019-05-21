@@ -77,7 +77,6 @@ class CelestialBodies extends Component {
     }
     const celestialBodyName = {
         fontSize: "40px",
-        margin: "15px 0px 0px"
     }
     const formStyle = {
         fontSize: "25px",
