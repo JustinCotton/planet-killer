@@ -54,7 +54,7 @@ class Planet extends Component {
 
   render() {
     if(this.state.redirectToHome) {
-        return (<Redirect to="/planets" />)
+        return (<Redirect to="/destruction" />)
     }
 
     const stats = {

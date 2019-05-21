@@ -53,7 +53,7 @@ class CelestialBody extends Component {
 
   render() {
     if(this.state.redirectToHome) {
-        return (<Redirect to="/celestialbodies" />)
+        return (<Redirect to="/destruction" />)
     }
     const stats = {
         fontSize: "25px",

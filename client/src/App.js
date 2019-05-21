@@ -5,6 +5,7 @@ import Planet from './components/Planet'
 import CelestialBodies from './components/CelestialBodies'
 import CelestialBody from './components/CelestialBody'
 import WeaponSystem from './components/WeaponSystem'
+import Destruction from './components/Destruction'
 
 class App extends Component {
   render () {
@@ -47,6 +48,7 @@ class App extends Component {
           </div>
           <Switch>
             <Route exact path="/" component={WeaponSystem}/>
+            <Route exact path="/destruction" component={Destruction}/>
             <Route exact path="/planets" component={Planets}/>
             <Route path="/planets/:id" component={Planet}/>
             <Route exact path="/celestialbodies" component={CelestialBodies}/>
