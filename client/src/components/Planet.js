@@ -163,7 +163,8 @@ class Planet extends Component {
                     <div>Number of Moons: {this.state.planet.moons}</div>
                     {/* <div>Destroyed: {this.state.planet.destroyed}</div> */}
                     <div> 
-                        <button onClick={this.toggleEditForm} className="greenButton">Spare</button>
+                        {/* <button onClick={this.toggleEditForm} className="greenButton">Spare</button> */}
+                        <Link to="/planets"><button className="greenButton">Spare</button></Link>
                         <button onClick={this.toggleEditForm} className="yellowButton">Transform</button>
                         <button onClick={this.deletePlanet} className="redButton">Destroy</button>
                         {/* <ControlPanel /> */}

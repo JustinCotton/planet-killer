@@ -68,7 +68,6 @@ class CelestialBody extends Component {
     }
     const celestialBodyName = {
         fontSize: "40px",
-        margin: "15px 0px 0px"
     }
     const formStyle = {
         fontSize: "25px",
@@ -151,7 +150,7 @@ class CelestialBody extends Component {
                     <div>Constellation: {this.state.celestialBody.constellation}</div>
                     {/* <div>Destroyed: {this.state.celestialBody.destroyed}</div> */}
                     <div>
-                        <button onClick={this.toggleEditForm} className="greenButton">Spare</button>
+                        <Link to="/celestialbodies"><button className="greenButton">Spare</button></Link>
                         <button onClick={this.toggleEditForm} className="yellowButton">Transform</button>
                         <button onClick={this.deleteCelestialBody} className="redButton">Delete</button>
                         {/* <ControlPanel /> */}
