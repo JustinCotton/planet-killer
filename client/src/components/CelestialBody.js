@@ -151,7 +151,7 @@ class CelestialBody extends Component {
                     <div>
                         <Link to="/celestialbodies"><button className="greenButton">Spare</button></Link>
                         <button onClick={this.toggleEditForm} className="yellowButton">Transform</button>
-                        <button onClick={this.deleteCelestialBody} className="redButton">Delete</button>
+                        <button onClick={this.deleteCelestialBody} className="redButton">Destroy</button>
                         {/* <ControlPanel /> */}
                     </div>
                 </div>
