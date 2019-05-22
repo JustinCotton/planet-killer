@@ -18,7 +18,7 @@ Full-stack MERN (MongoDB, Express, React, Node.js) application deployed to Herok
   * API Development: Postman
   * Cloud Deployment: Heroku
   * Text Editor: Visual Studio Code
-  * Design: Unsplash, Google Fonts, Spaceopedia
+  * Design: Unsplash, Google Fonts, Solar System Scope Spacepedia
 
 ## Features
 
