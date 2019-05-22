@@ -4,7 +4,7 @@ let CelestialBody = require('../models/CelestialBody.js')
 let newPlanets = [
   {
     name: "Mercury",
-    image: "https://www.solarsystemscope.com/spacepedia/images/handbook/renders/mercury.png,
+    image: "https://www.solarsystemscope.com/spacepedia/images/handbook/renders/mercury.png",
     averageDistanceFromEarth: "56,974,146 miles",
     climate: "Hot!",
     meanTemperatureF: 333,
