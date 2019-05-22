@@ -11,14 +11,14 @@ Full-stack MERN (MongoDB, Express, React, Node.js) application deployed to Herok
 
   * Client-side Tools: React, Ajax
   * Server-side Tools: Express, Mongoose
-  * Languages: CSS, Javascript
+  * Languages: CSS, Javascript, JSX
   * Development Tools: nodeJS    
   * Version Control: Git, Github
   * Database Tools: MongoDB, MongoDB Compass
   * API Development: Postman
   * Cloud Deployment: Heroku
   * Text Editor: Visual Studio Code
-  * Design: Unsplash, Google Fonts
+  * Design: Unsplash, Google Fonts, Spaceopedia
 
 ## Features
 
