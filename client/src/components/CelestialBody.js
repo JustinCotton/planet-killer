@@ -60,6 +60,11 @@ class CelestialBody extends Component {
         color: "yellow",
         fontWeight: "bold"
     }
+    const statsWrapper = {
+        backgroundColor: "rgba(0,0,0,0.4)",
+        borderRadius: "20px",
+        padding: "10px"
+    }
     const celestialBodyStyle = {
         borderRadius: "150px",
         height: "300px",
@@ -143,11 +148,13 @@ class CelestialBody extends Component {
               : <div style={stats}>
                     <h1 style={celestialBodyName}>{this.state.celestialBody.name}</h1>
                     <div><img src={this.state.celestialBody.image} style={celestialBodyStyle}/></div>
+                    <div style={statsWrapper}>
                     <div>Classification: {this.state.celestialBody.classification}</div>
                     <div>Distance From Earth: {this.state.celestialBody.distanceFromEarth}</div>
                     <div>Galaxy: {this.state.celestialBody.galaxy}</div>
                     <div>Constellation: {this.state.celestialBody.constellation}</div>
                     {/* <div>Destroyed: {this.state.celestialBody.destroyed}</div> */}
+                    </div>
                     <div>
                         <Link to="/celestialbodies"><button className="greenButton">Spare</button></Link>
                         <button onClick={this.toggleEditForm} className="yellowButton">Transform</button>

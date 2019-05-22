@@ -60,7 +60,12 @@ class Planet extends Component {
         fontSize: "25px",
         display: "inline-block",
         color: "yellow",
-        fontWeight: "bold"
+        fontWeight: "bold",
+    }
+    const statsWrapper = {
+        backgroundColor: "rgba(0,0,0,0.4)",
+        borderRadius: "20px",
+        padding: "10px"
     }
     const planetStyle = {
         borderRadius: "150px",
@@ -155,13 +160,15 @@ class Planet extends Component {
                 : <div style={stats}>
                     <h1 style={planetName}>{this.state.planet.name}</h1>
                     <div><img src={this.state.planet.image} style={planetStyle}/></div>
+                    <div style={statsWrapper}>
                     <div>Average Distance From Earth: {this.state.planet.averageDistanceFromEarth}</div>
                     <div>Climate: {this.state.planet.climate}</div>
                     <div>Mean Temperature: {this.state.planet.meanTemperatureF}&deg;F</div>
                     <div>Gravity Related to Earth's: {this.state.planet.percentOfEarthGravity}%</div>
                     <div>Number of Moons: {this.state.planet.moons}</div>
                     {/* <div>Destroyed: {this.state.planet.destroyed}</div> */}
-                    <div> 
+                    </div>
+                    <div>
                         <Link to="/planets"><button className="greenButton">Spare</button></Link>
                         <button onClick={this.toggleEditForm} className="yellowButton">Transform</button>
                         <button onClick={this.deletePlanet} className="redButton">Destroy</button>
