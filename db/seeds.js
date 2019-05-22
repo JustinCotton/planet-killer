@@ -4,7 +4,7 @@ let CelestialBody = require('../models/CelestialBody.js')
 let newPlanets = [
   {
     name: "Mercury",
-    image: "https://nssdc.gsfc.nasa.gov/planetary/banner/mercury.gif",
+    image: "https://www.solarsystemscope.com/spacepedia/images/handbook/renders/mercury.png,
     averageDistanceFromEarth: "56,974,146 miles",
     climate: "Hot!",
     meanTemperatureF: 333,
@@ -14,7 +14,7 @@ let newPlanets = [
   },
   {
     name: "Venus",
-    image: "https://nssdc.gsfc.nasa.gov/planetary/banner/venus.gif",
+    image: "https://www.solarsystemscope.com/spacepedia/images/handbook/renders/venus.png",
     averageDistanceFromEarth: "25,724,767 miles",
     climate: "Super Hot!",
     meanTemperatureF: 867,
@@ -24,7 +24,7 @@ let newPlanets = [
   },
   {
     name: "Earth",
-    image: "https://nssdc.gsfc.nasa.gov/planetary/banner/earth.gif",
+    image: "https://www.solarsystemscope.com/spacepedia/images/handbook/renders/earth.png",
     averageDistanceFromEarth: "0 miles",
     climate: "Habitable, for now...",
     meanTemperatureF: 59,
@@ -34,7 +34,7 @@ let newPlanets = [
   },
   {
     name: "Mars",
-    image: "https://nssdc.gsfc.nasa.gov/planetary/banner/mars.gif",
+    image: "https://www.solarsystemscope.com/spacepedia/images/handbook/renders/mars.png",
     averageDistanceFromEarth: "48,678,219 miles",
     climate: "Cold",
     meanTemperatureF: -85,
@@ -44,7 +44,7 @@ let newPlanets = [
   },
   {
     name: "Jupiter",
-    image: "https://nssdc.gsfc.nasa.gov/planetary/banner/jupiter.gif",
+    image: "https://www.solarsystemscope.com/spacepedia/images/handbook/renders/jupiter.png",
     averageDistanceFromEarth: "390,674,710 miles",
     climate: "Very Cold",
     meanTemperatureF: -166,
@@ -54,7 +54,7 @@ let newPlanets = [
   },
   {
     name: "Saturn",
-    image: "https://nssdc.gsfc.nasa.gov/planetary/banner/saturn.gif",
+    image: "https://www.solarsystemscope.com/spacepedia/images/handbook/renders/saturn.png",
     averageDistanceFromEarth: "792,248,270 miles",
     climate: "Super Cold",
     meanTemperatureF: -220,
@@ -64,7 +64,7 @@ let newPlanets = [
   },
   {
     name: "Uranus",
-    image: "https://nssdc.gsfc.nasa.gov/planetary/banner/uranus.gif",
+    image: "https://www.solarsystemscope.com/spacepedia/images/handbook/renders/uranus.png",
     averageDistanceFromEarth: "1,692,662,530 miles",
     climate: "Unbearably Cold",
     meanTemperatureF: -320,
@@ -74,7 +74,7 @@ let newPlanets = [
   },
   {
     name: "Neptune",
-    image: "https://nssdc.gsfc.nasa.gov/planetary/banner/neptune.gif",
+    image: "https://www.solarsystemscope.com/spacepedia/images/handbook/renders/neptune.png",
     averageDistanceFromEarth: "2,703,959,960 miles",
     climate: "Stormy and Cold",
     meanTemperatureF: -320,
@@ -84,7 +84,7 @@ let newPlanets = [
   },
   {
     name: "Pluto",
-    image: "https://nssdc.gsfc.nasa.gov/planetary/banner/plutofact.gif",
+    image: "https://www.solarsystemscope.com/spacepedia/images/handbook/renders/pluto.png",
     averageDistanceFromEarth: "3,670,262,530 miles",
     climate: "Frigid",
     meanTemperatureF: -320,
@@ -97,7 +97,7 @@ let newPlanets = [
 let newCelestialBodies = [
   {
     name: "Earth's Sun",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg/800px-The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg",
+    image: "https://www.solarsystemscope.com/spacepedia/images/handbook/renders/sun.png",
     classification: "Yellow Dwarf Star",
     distanceFromEarth: "92.96 million miles",
     galaxy: "Milky Way",
@@ -106,7 +106,7 @@ let newCelestialBodies = [
   },
   {
     name: "Earth's Moon",
-    image: "https://nssdc.gsfc.nasa.gov/planetary/banner/moon.gif",
+    image: "https://www.solarsystemscope.com/spacepedia/images/handbook/renders/moon.png",
     classification: "Natural Satellite",
     distanceFromEarth: "238,900 miles",
     galaxy: "Milky Way",
@@ -124,7 +124,7 @@ let newCelestialBodies = [
   },
   {
     name: "Carina Nebula",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Carina_Nebula_by_Harel_Boren_%28151851961%2C_modified%29.jpg/1920px-Carina_Nebula_by_Harel_Boren_%28151851961%2C_modified%29.jpg",
+    image: "https://www.abc.net.au/news/image/9781926-3x2-940x627.jpg",
     classification: "Nebula",
     distanceFromEarth: "2,600 parsecs",
     galaxy: "Milky Way",
@@ -138,6 +138,33 @@ let newCelestialBodies = [
     distanceFromEarth: "2.537 million light years",
     galaxy: "Andromeda",
     constellation: "Andromeda",
+    destroyed: false
+  },
+  {
+    name: "Pistol Star",
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/80/Pistol_star_and_nebula.jpg",
+    classification: "Blue Hypergiant Star",
+    distanceFromEarth: "25,000 light years",
+    galaxy: "Milky Way",
+    constellation: "Sagittarius",
+    destroyed: false
+  },
+  {
+    name: "Io",
+    image: "https://www.solarsystemscope.com/spacepedia/images/handbook/renders/io.png",
+    classification: "Natural Satellite",
+    distanceFromEarth: "390,400,000 miles",
+    galaxy: "Milky Way",
+    constellation: "None",
+    destroyed: false
+  },
+  {
+    name: "Crab Pulsar",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Chandra-crab.jpg/1920px-Chandra-crab.jpg",
+    classification: "Blue Hypergiant Star",
+    distanceFromEarth: "2.0 kiloparsecs",
+    galaxy: "Milky Way",
+    constellation: "Taurus",
     destroyed: false
   }  
 ]
