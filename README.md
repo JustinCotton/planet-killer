@@ -3,6 +3,8 @@
 
 Full-stack MERN (MongoDB, Express, React, Node.js) application deployed to Heroku.
 
+![Screenshot](https://github.com/JustinCotton/planet-killer/blob/master/PlanetKillerScreenshot.JPG
+
 **Live site:** <https://planet-killer.herokuapp.com/>
 
 **Project Planning:** [Trello](https://trello.com/b/3Be4OE0C/planet-killer)
