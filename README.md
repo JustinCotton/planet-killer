@@ -11,13 +11,13 @@ Planet creation and destruction full-stack MERN (MongoDB, Express, React, Node.j
 
 ## Technologies Used
 
+  * Language: JavaScript
   * Client-side Tools: React, Ajax
-  * Server-side Tools: Express, Mongoose
-  * Languages: CSS, Javascript, JSX
-  * Development Tools: nodeJS    
-  * Version Control: Git, Github
+  * Server-side Tools: Express.js, Mongoose
   * Database Tools: MongoDB, MongoDB Compass
+  * Development Tools: Node.js    
   * API Development: Postman
+  * Version Control: Git, GitHub
   * Cloud Deployment: Heroku
   * Text Editor: Visual Studio Code
   * Design: Unsplash, Google Fonts, Solar System Scope Spacepedia
