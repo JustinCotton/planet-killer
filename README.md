@@ -1,7 +1,7 @@
 # Planet Killer: Celestial Bodies of Death!
 ## Overview
 
-Full-stack MERN (MongoDB, Express, React, Node.js) application deployed to Heroku.
+Planet creation and destruction full-stack MERN (MongoDB, Express, React, Node.js) application deployed to Heroku cloud platform.
 
 ![Screenshot](https://github.com/JustinCotton/planet-killer/blob/master/PlanetKillerScreenshot.JPG)
 
